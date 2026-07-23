@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 45th Monthsary ❤️</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600;700&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="night-sky"></div>
+    <div class="moon"></div>
+
+    <div class="float-glass"></div>
+    <div class="float-glass"></div>
+    <div class="float-glass"></div>
+    <div class="float-glass"></div>
+
+    <canvas id="star-canvas"></canvas>
+    <canvas id="particle-canvas"></canvas>
+    <canvas id="firework-canvas"></canvas>
+
+    <div class="floating-hearts-container" id="floating-hearts"></div>
+    <div class="floating-balloons-container" id="floating-balloons"></div>
+
+    <div class="music-player" id="music-player">
+        <button class="music-btn" id="play-btn" title="Play Music">▶</button>
+        <button class="music-btn" id="pause-btn" title="Pause Music">⏸</button>
+        <input type="range" class="volume-slider" id="volume-slider" min="0" max="1" step="0.01" value="0.3">
+    </div>
+
+    <audio id="bg-music" loop></audio>
+
+    <nav class="nav-dots" id="nav-dots">
+        <button class="nav-dot active" data-section="landing" title="Home"></button>
+        <button class="nav-dot" data-section="timer-section" title="Timer"></button>
+        <button class="nav-dot" data-section="letter-section" title="Love Letter"></button>
+        <button class="nav-dot" data-section="gallery-section" title="Gallery"></button>
+        <button class="nav-dot" data-section="final-section" title="Final"></button>
+    </nav>
+
+    <div class="main-wrapper">
+        <section id="landing">
+            <div class="landing-content">
+<div class="photo-frame">
+    <img id="couple-photo" src="couple.jpg" alt="Couple Picture">
+</div>
+                <h1 id="main-title" class="main-title">Happy 45th Monthsary ❤️</h1>
+                <p id="subtitle" class="subtitle">45 Months of Love, Memories, and Forever.</p>
+                <p id="romantic-paragraph" class="romantic-paragraph">From the moment our paths crossed, every beat of my heart has belonged to you.</p>
+                <div class="buttons-container">
+                    <button class="btn btn-pink" onclick="scrollToSection('timer-section')">See Our Timeline 💕</button>
+                    <button class="btn btn-purple" onclick="scrollToSection('letter-section')">Read My Letter 💌</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="timer-section" class="section-hidden">
+            <h2 class="timer-title">Our Love Story ❤️</h2>
+            <div class="timer-container">
+                <div class="timer-box glass-card">
+                    <div id="timer-years" class="timer-number">00</div>
+                    <div class="timer-label">Years</div>
+                </div>
+                <div class="timer-box glass-card">
+                    <div id="timer-months" class="timer-number">00</div>
+                    <div class="timer-label">Months</div>
+                </div>
+                <div class="timer-box glass-card">
+                    <div id="timer-days" class="timer-number">00</div>
+                    <div class="timer-label">Days</div>
+                </div>
+                <div class="timer-box glass-card">
+                    <div id="timer-hours" class="timer-number">00</div>
+                    <div class="timer-label">Hours</div>
+                </div>
+                <div class="timer-box glass-card">
+                    <div id="timer-minutes" class="timer-number">00</div>
+                    <div class="timer-label">Minutes</div>
+                </div>
+                <div class="timer-box glass-card">
+                    <div id="timer-seconds" class="timer-number">00</div>
+                    <div class="timer-label">Seconds</div>
+                </div>
+            </div>
+            <div class="buttons-container" style="margin-top: 20px;">
+                <button class="btn btn-outline" onclick="scrollToSection('landing')">Back to Top ⬆️</button>
+                <button class="btn" onclick="scrollToSection('letter-section')">Read My Letter 💌</button>
+            </div>
+        </section>
+
+        <section id="letter-section" class="section-hidden">
+            <div class="letter-card glass-card">
+                <h2 id="letter-title" class="letter-title">My Dearest Love ❤️</h2>
+                <div id="letter-content" class="letter-content"></div>
+                <div style="text-align: center; margin-top: 30px;">
+                    <button class="btn btn-outline" onclick="scrollToSection('gallery-section')">View Memories 📸</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery-section" class="section-hidden">
+            <h2 class="gallery-title">Our Beautiful Memories 📸</h2>
+            <div id="gallery-grid" class="gallery-grid"></div>
+            <div class="buttons-container" style="margin-top: 30px;">
+                <button class="btn btn-outline" onclick="scrollToSection('letter-section')">Back to Letter 💌</button>
+                <button class="btn btn-gold" onclick="scrollToSection('final-section')">Final Surprise 🎁</button>
+            </div>
+        </section>
+
+        <section id="final-section" class="section-hidden">
+            <div class="final-content">
+                <div class="giant-heart">❤️</div>
+                <h2 id="final-message" class="final-message">I Love You Forever ❤️</h2>
+                <p id="final-submessage" class="final-submessage">Thank you for the most beautiful 45 months of my life.</p>
+                <p id="forever-message" class="forever-message">Forever & Always ❤️</p>
+            </div>
+        </section>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
